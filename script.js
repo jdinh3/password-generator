@@ -6,16 +6,26 @@ generateBtn.addEventListener("click", promptMe);
   function promptMe() {
     var pwLength = prompt("How many characters would you like your password to contain?");
     
-
 // // Conditional Statements if user inputs an invalid password length
 if (pwLength < 8) {
   alert("Password length must be at least 8 characters");
+  promptMe();
 } else if
   (pwLength > 128) {
   alert("Password must be less than 129 characters");
+  promptMe();
 }
-
 console.log(pwLength);
+
+// Confirm character types to include
+var characterSpecial = confirm("Click OK to confirm including special characters.");
+console.log(characterSpecial);
+var numeric = confirm("Click OK to confirm including numeric characters");
+console.log(numeric);
+var lowerCase = confirm("Click OK to confirm including lowercase letter");
+console.log(lowerCase);
+var upperCase = confirm("Click OK to confirm including uppercase letter");
+console.log(upperCase);
 }
 
 // Write password to the #password input
