@@ -117,6 +117,12 @@ function generatePassword() {
     posCharacters = posCharacters.concat(uppercaseOptions);
   }
 
+  // Conditional Statement if user does not select any character types
+  if (posCharacters.length === 0) {
+    alert("Please confirm at least one parameter");
+    return;
+  }
+
   // logs the password to the console
   let randomStringOutput = writePassword(pwLength, posCharacters);
   console.log("output " + randomStringOutput);
